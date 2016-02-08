@@ -1,0 +1,19 @@
+{
+  "name": "gotofile-atom",
+  "main": "./lib/gotofile-atom",
+  "version": "0.3.0",
+  "description": "Open the right file - directly from Chrome",
+  "keywords": [],
+  "activationCommands": {
+    "atom-workspace": "Go To File:toggle"
+  },
+  "repository": "https://github.com/ganarajpr/gotofile-atom",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "node-path-extras": "^0.4.1",
+    "socket.io": "^1.4.5"
+  }
+}
