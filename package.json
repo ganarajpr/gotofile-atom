@@ -1,7 +1,7 @@
 {
   "name": "gotofile-atom",
   "main": "./lib/gotofile-atom",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Open the right file - directly from Chrome",
   "keywords": [],
   "activationCommands": {
