@@ -4,9 +4,6 @@
   "version": "0.5.2",
   "description": "Open the right file - directly from Chrome",
   "keywords": [],
-  "activationCommands": {
-    "atom-workspace": "Go To File:toggle"
-  },
   "repository": "https://github.com/ganarajpr/gotofile-atom",
   "license": "MIT",
   "engines": {

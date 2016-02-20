@@ -14,16 +14,17 @@ module.exports = SocketServer =
       atom.notifications.addSuccess 'Chrome Connected'
       socket.on 'error', (err) ->
         console.error err.stack
-      socket.on 'gotofile-data', (data) ->
-        if !data.length or typeof data[0] != 'string' 
+      socket.on 'gotofile-data', (paths) ->
+        if !paths.length or typeof paths[0] != 'string'
           atom.notifications.addError 'Chrome did not send source path: Perhaps you did not add babel-plugin-transform-jsx-include-source ?'
           return
-        projectPath = atom.project.rootDirectories[0].path;
-        if pathex.along data[0],projectPath
-          rel = path.relative projectPath, data[0]
-          atom.workspace.open data[0]
-          atom.show()
-        return
+        atom.project.rootDirectories.forEach (rd) ->
+          projectPath = rd.path
+          if pathex.along paths[0],projectPath
+            rel = path.relative projectPath, paths[0]
+            atom.workspace.open paths[0]
+            atom.show()
+          return
       return
   stop: () ->
     @io.close()
