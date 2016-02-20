@@ -1,11 +1,11 @@
 
 {CompositeDisposable} = require 'atom'
-socketServer             = require './socket-server'
+socketServer          = require './socket-server'
 
 
 module.exports = AtomicChrome =
   activate: (state) ->
-    socketServer.start()
+      socketServer.start()
 
   deactivate: ->
     socketServer.stop()
